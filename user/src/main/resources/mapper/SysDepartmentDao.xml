@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SysDepartmentDao">
+
+    <select id="getDepartment" resultType="map">
+        select sd.*,su.username from sys_department sd
+        join sys_user su on su.userid=sd.createuserid
+        where sd.isuse=0
+        <if test="parentdepartmentcode!=null and parentdepartmentcode!=''">
+            and sd.parentdepartmentcode = #{parentdepartmentcode}
+        </if>
+        ORDER BY createdatetime DESC
+    </select>
+    <select id="getParentBydepartmentcode" resultType="map">
+        select * from sys_department where isuse=0
+        <if test="departmentcode!=null and departmentcode!=''">
+            and departmentcode = #{departmentcode}
+        </if>
+    </select>
+    <insert id="departmentAdd">
+        INSERT INTO sys_department(departmentcode,parentdepartmentcode,departmentname,memo,createuserid,createdatetime)
+        VALUES (#{departmentcode},#{parentdepartmentcode},#{departmentname},#{memo},#{createuserid},now())
+    </insert>
+    <update id="departmentUpdate">
+        UPDATE sys_department AS sd
+        <set>
+            <if test="parentdepartmentcode !=null and parentdepartmentcode!=''">
+                sd.parentdepartmentcode = #{parentdepartmentcode},
+            </if>
+            <if test="departmentname!=null and departmentname!=''">
+                sd.departmentname = #{departmentname},
+            </if>
+            sd.memo = #{memo}
+
+        </set>
+        WHERE sd.departmentcode = #{departmentcode}
+    </update>
+    <!-- 删除组织机构 -->
+    <update id="departmentDel">
+        UPDATE sys_department SET isuse = 1 WHERE departmentcode = #{departmentcode}
+    </update>
+    <!-- 删除角色 -->
+    <update id="roleDel">
+        UPDATE sys_role SET isuse =1 WHERE departmentcode = #{departmentcode}
+    </update>
+    <!-- 删除用户 -->
+    <update id="sysUserDel">
+        UPDATE sys_user SET isuse = 1 WHERE departmentcode = #{departmentcode}
+    </update>
+
+</mapper>

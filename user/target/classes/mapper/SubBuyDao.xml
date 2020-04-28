@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SubBuyDao">
+    <insert id="subBuyAdd">
+        INSERT INTO `sub_buy`(`pid`, `nickname`, `img`, `phone`, `address`, `member`,`createtime`,
+        `endtime`,`province_code`,`city_code`,`integral`,`countdown`,`color`,`appid`,`secret`,`wechat_appid`,`wechat_secret`,`min_money`,`max_money`)
+        VALUES (#{pid}, #{nickname}, #{img}, #{phone}, #{address}, #{member}, now(),
+        #{endtime},#{province_code},#{city_code},#{integral},#{countdown},#{color},#{appid},#{secret},#{wechat_appid},#{wechat_secret},#{min_money},#{max_money});
+    </insert>
+    <select id="subBuySelectByPage" resultType="map">
+        SELECT DATE_FORMAT(sb.endtime,'%Y-%m-%d %T') as endtime,DATE_FORMAT(sb.createtime,'%Y-%m-%d %T') as
+        createtime,DATE_FORMAT(sb.updatetime,'%Y-%m-%d %T') as updatetime,sb.*,sp.PROVINCE_NAME as
+        provinceName,sc.CITY_NAME as cityName FROM `sub_buy` sb
+        left join sys_province sp on sp.PROVINCE_CODE=sb.province_code
+        left join sys_city sc on sc.CITY_CODE=sb.city_code
+        WHERE sb.isdel=0
+        LIMIT #{start},#{end}
+    </select>
+    <select id="subBuySelectByCount" resultType="int">
+        SELECT count(0) FROM `sub_buy` sb
+        left join sys_province sp on sp.PROVINCE_CODE=sb.province_code
+        left join sys_city sc on sc.CITY_CODE=sb.city_code
+        WHERE sb.isdel=0
+    </select>
+    <update id="subBuyUpdate">
+        update `sub_buy`
+        <set>
+            <if test="nickname!=null and nickname!=''">
+                nickname=#{nickname},
+            </if>
+            <if test="img!=null and img!=''">
+                img=#{img},
+            </if>
+            <if test="address!=null and address!=''">
+                address=#{address},
+            </if>
+            <if test="member!=null and member!=''">
+                member=#{member},
+            </if>
+            <if test="phone!=null and phone!=''">
+                phone=#{phone},
+            </if>
+            <if test="province_code!=null and province_code!=''">
+                province_code=#{province_code},
+            </if>
+            <if test="integral!=null and integral!=''">
+                integral=#{integral},
+            </if>
+            <if test="countdown!=null and countdown!=''">
+                countdown=#{countdown},
+            </if>
+            <if test="city_code!=null and city_code!=''">
+                city_code=#{city_code},
+            </if>
+            <if test="endtime!=null and endtime!=''">
+                endtime=#{endtime},
+            </if>
+            <if test="min_money!=null and min_money!=''">
+                min_money=#{min_money},
+            </if>
+            <if test="max_money!=null and max_money!=''">
+                max_money=#{max_money},
+            </if>
+            <if test="appid!=null and appid!=''">
+                appid=#{appid},
+            </if>
+            <if test="secret!=null and secret!=''">
+                secret=#{secret},
+            </if>
+            <if test="wechat_appid!=null and wechat_appid!=''">
+                wechat_appid=#{wechat_appid},
+            </if>
+            <if test="wechat_secret!=null and wechat_secret!=''">
+                wechat_secret=#{wechat_secret},
+            </if>
+            updatetime=now()
+        </set>
+        where pid=#{pid}
+    </update>
+    <update id="subBuyDelUpdate">
+        update `sub_buy`
+        <set>
+            <if test="state!=null and state!=''">
+                state=#{state},
+            </if>
+            <if test="isdel!=null and isdel!=''">
+                isdel=#{isdel},
+            </if>
+            updatetime=now()
+        </set>
+        where pid=#{pid}
+    </update>
+    <select id="subBuySelectsub" resultType="map">
+        SELECT * FROM `sub_buy` WHERE isdel=0
+    </select>
+    <select id="subBuySelectByNumAll" resultType="int">
+        SELECT count(0) FROM `sub_buy` WHERE isdel=0
+    </select>
+    <select id="subBuySelectByNumLast" resultType="int">
+        SELECT count(0) FROM `sub_buy` WHERE isdel=0 and createtime
+        BETWEEN (select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract( day from now())-1
+        day),interval 1 month))
+        AND (select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract( day from now()) day),interval 0
+        month))
+    </select>
+    <select id="subBuySelectByNumNow" resultType="int">
+        SELECT count(0) FROM `sub_buy` WHERE isdel=0 and createtime
+        BETWEEN (select DATE_ADD(curdate(),interval -day(curdate())+1 day))
+        AND (select DATE_ADD(curdate(),interval 1 DAY))
+    </select>
+    <update id="subBuyUpdateById">
+        update `sub_buy` set payid=#{payid} where pid=#{pid}
+    </update>
+</mapper>

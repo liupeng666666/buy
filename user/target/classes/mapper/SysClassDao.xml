@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SysClassDao">
+    <insert id="sysClassAdd">
+        INSERT INTO `sys_class`(`pid`, `name`, `img`, `createtime`, `sysuserid`, `state`, `isdel`,`holiday_img`)
+        VALUES (uuid(),#{name}, #{img}, now(), #{sysuserid}, 0, 0,#{holiday_img});
+    </insert>
+    <select id="sysClassSelectByPage" resultType="map">
+        SELECT sc.*,su.username as suusername from `sys_class` sc
+        left join `sys_user` su on su.userid=sc.sysuserid
+        WHERE sc.isdel=0 ORDER BY sc.createtime DESC
+        LIMIT #{start},#{end}
+    </select>
+    <select id="sysClassSelectByCount" resultType="int">
+        SELECT count(0) from `sys_class` sc
+        left join `sys_user` su on su.userid=sc.sysuserid
+        WHERE sc.isdel=0
+    </select>
+    <update id="sysClassUpdate">
+        update `sys_class`
+        <set>
+            <if test="name!=null and name!=''">
+                name=#{name},
+            </if>
+            <if test="img!=null and img!=''">
+                img=#{img},
+            </if>
+            <if test="holiday_img!=null and holiday_img!=''">
+                holiday_img=#{holiday_img},
+            </if>
+        </set>
+        where pid=#{pid}
+    </update>
+    <update id="sysClassDelUpdate">
+        update `sys_class`
+        <set>
+            <if test="state!=null and state!=''">
+                state=#{state},
+            </if>
+            <if test="isdel!=null and isdel!=''">
+                isdel=#{isdel},
+            </if>
+        </set>
+        where pid=#{pid}
+    </update>
+
+</mapper>

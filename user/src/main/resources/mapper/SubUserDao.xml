@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SubUserDao">
+
+
+    <select id="subUserSelectByPage" resultType="map">
+        SELECT su.*,bm.nickname as bmnickname,sb.nickname as sbnickname FROM `sub_user` su
+        JOIN (select * from `sub_buy` where isdel=0) sb ON sb.pid=su.buyid
+        JOIN (select * from `buy_mumber` where isdel=0 ) bm ON bm.pid=su.mumberid
+        <where>
+            su.isdel=0
+            <if test="map.buyid!=null and map.buyid!=''">
+                AND sb.pid = #{map.buyid}
+            </if>
+            <if test="map.mumberid!=null and map.mumberid!=''">
+                AND bm.pid = #{map.mumberid}
+            </if>
+            <if test="map.search!=null and map.search!=''">
+                AND (su.nickname like CONCAT("%",#{map.search},"%") OR su.phone like CONCAT("%",#{map.search},"%"))
+            </if>
+        </where>
+        ORDER BY su.createtime DESC
+        LIMIT #{start},#{end}
+
+    </select>
+    <select id="subUserSelectByCount" resultType="int">
+        SELECT count(0) FROM `sub_user` su
+        JOIN (select * from `sub_buy` where isdel=0) sb ON sb.pid=su.buyid
+        JOIN (select * from `buy_mumber` where isdel=0 ) bm ON bm.pid=su.mumberid
+        <where>
+            su.isdel=0
+            <if test="map.buyid!=null and map.buyid!=''">
+                AND sb.pid = #{map.buyid}
+            </if>
+            <if test="map.mumberid!=null and map.mumberid!=''">
+                AND bm.pid = #{map.mumberid}
+            </if>
+            <if test="map.search!=null and map.search!=''">
+                AND (su.nickname like CONCAT("%",#{map.search},"%") OR su.phone like CONCAT("%",#{map.search},"%"))
+            </if>
+        </where>
+
+
+    </select>
+    <update id="subUserUpdateDel">
+        update `sub_user`
+        <set>
+            <if test="state!=null and state!=''">
+                state=#{state},
+            </if>
+            <if test="isdel!=null and isdel!=''">
+                isdel=#{isdel},
+            </if>
+            updatetime=now()
+        </set>
+        where pid=#{pid}
+    </update>
+    <select id="subUserSelectByNumAll" resultType="int">
+        SELECT count(0) FROM `sub_user` where isdel=0
+    </select>
+    <select id="subUserSelectByNumLast" resultType="int">
+        SELECT count(0) FROM `sub_user` where isdel=0 and createtime
+        BETWEEN (select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract( day from now())-1
+        day),interval 1 month))
+        AND (select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract( day from now()) day),interval 0
+        month))
+    </select>
+    <select id="subUserSelectByNumNow" resultType="int">
+        SELECT count(0) FROM `sub_user` where isdel=0 and createtime
+        BETWEEN (select DATE_ADD(curdate(),interval -day(curdate())+1 day))
+        AND (select DATE_ADD(curdate(),interval 1 DAY))
+    </select>
+</mapper>

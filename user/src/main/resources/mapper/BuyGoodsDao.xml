@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.BuyGoodsDao">
+
+    <select id="buyGoodsSelectByPage" resultType="map">
+        SELECT bg.*,sb.nickname as sbnickname,bc.`name`,bu.nickname as bunickname FROM `buy_goods` bg
+        JOIN (select * from sub_buy where isdel=0 ) sb ON sb.pid=bg.buyid
+        JOIN (select * from buy_class where isdel=0 )bc ON bc.pid=bg.classid
+        JOIN (select * from buy_user where isdel=0) bu ON bu.pid=bg.sys_userid
+        <where>bg.isdel=0
+            <if test="map.buyid!=null and map.buyid!=''">
+                AND bg.buyid=#{map.buyid}
+            </if>
+            <if test="map.classid!=null and map.classid!=''">
+                AND bg.classid=#{map.classid}
+            </if>
+            <if test="map.type!=null and map.type!=''">
+                AND bg.type=#{map.type}
+            </if>
+            <if test="map.state!=null and map.state!=''">
+                AND bg.state=#{map.state}
+            </if>
+            <if test="map.search!=null and map.search!=''">
+                AND bg.title like CONCAT("%",#{map.search},"%")
+            </if>
+            <if test="map.num!=null and map.num!=''">
+                <if test="map.num==0">
+                    AND bg.number!=bg.w_number
+                </if>
+                <if test="map.num==1">
+                    AND bg.number=bg.w_number
+                </if>
+            </if>
+            <if test="map.time!=null and map.time!=''">
+                <if test="map.time==0">
+                    AND now() &lt; bg.opentime
+                </if>
+                <if test="map.time==1">
+                    AND now() between bg.opentime and bg.endtime
+                </if>
+                <if test="map.time==2">
+                    AND now() &gt; bg.endtime
+                </if>
+            </if>
+        </where>
+
+        LIMIT #{start},#{end}
+    </select>
+    <select id="buyGoodsSelectByCount" resultType="int">
+        SELECT count(0) FROM `buy_goods` bg
+        JOIN (select * from sub_buy where isdel=0 ) sb ON sb.pid=bg.buyid
+        JOIN (select * from buy_class where isdel=0 )bc ON bc.pid=bg.classid
+        JOIN (select * from buy_user where isdel=0) bu ON bu.pid=bg.sys_userid
+        <where>bg.isdel=0
+            <if test="map.buyid!=null and map.buyid!=''">
+                AND bg.buyid=#{map.buyid}
+            </if>
+            <if test="map.classid!=null and map.classid!=''">
+                AND bg.classid=#{map.classid}
+            </if>
+            <if test="map.type!=null and map.type!=''">
+                AND bg.type=#{map.type}
+            </if>
+            <if test="map.state!=null and map.state!=''">
+                AND bg.state=#{map.state}
+            </if>
+            <if test="map.search!=null and map.search!=''">
+                AND bg.title like CONCAT("%",#{map.search},"%")
+            </if>
+            <if test="map.num!=null and map.num!=''">
+                <if test="map.num==0">
+                    AND bg.number!=bg.w_number
+                </if>
+                <if test="map.num==1">
+                    AND bg.number=bg.w_number
+                </if>
+            </if>
+            <if test="map.time!=null and map.time!=''">
+                <if test="map.time==0">
+                    AND now() &lt; bg.opentime
+                </if>
+                <if test="map.time==1">
+                    AND now() between bg.opentime and bg.endtime
+                </if>
+                <if test="map.time==2">
+                    AND now() &gt; bg.endtime
+                </if>
+            </if>
+        </where>
+    </select>
+</mapper>

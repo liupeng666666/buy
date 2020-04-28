@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SubOrderListDao">
+
+    <select id="subOrderListSelectByPage" resultType="map">
+        SELECT sol.*,sb.nickname as sbnickname,bm.fullname as bmfullname,su.nickname as sunickname FROM `sub_order_list`
+        sol
+        INNER JOIN (select * from sub_buy where isdel=0) sb ON sb.pid=sol.buyid
+        INNER JOIN (select * from buy_mumber where isdel=0) bm ON bm.pid=sol.mumberid
+        INNER JOIN (select * from sub_user where isdel=0) su ON su.pid=sol.userid
+        <where>sol.isdel=0
+            <if test="map.goodsid!=null and map.goodsid!=''">
+                AND sol.goodsid=#{map.goodsid}
+            </if>
+            <if test="map.buyid!=null and map.buyid!=''">
+                AND sol.buyid=#{map.buyid}
+            </if>
+            <if test="map.mumberid!=null and map.mumberid!=''">
+                AND sol.mumberid=#{map.mumberid}
+            </if>
+            <if test="map.search!=null and map.search!=''">
+                AND (sol.orderid like CONCAT("%",#{map.search},"%")
+                OR su.nickname like CONCAT("%",#{map.search},"%"))
+            </if>
+        </where>
+        LIMIT #{start},#{end}
+    </select>
+    <select id="subOrderListSelectByCount" resultType="int">
+        SELECT count(0) FROM `sub_order_list` sol
+        INNER JOIN (select * from sub_buy where isdel=0) sb ON sb.pid=sol.buyid
+        INNER JOIN (select * from buy_mumber where isdel=0) bm ON bm.pid=sol.mumberid
+        INNER JOIN (select * from sub_user where isdel=0) su ON su.pid=sol.userid
+        <where>sol.isdel=0
+            <if test="map.goodsid!=null and map.goodsid!=''">
+                AND sol.goodsid=#{map.goodsid}
+            </if>
+            <if test="map.buyid!=null and map.buyid!=''">
+                AND sol.buyid=#{map.buyid}
+            </if>
+            <if test="map.mumberid!=null and map.mumberid!=''">
+                AND sol.mumberid=#{map.mumberid}
+            </if>
+            <if test="map.search!=null and map.search!=''">
+                AND (sol.orderid like CONCAT("%",#{map.search},"%")
+                OR su.nickname like CONCAT("%",#{map.search},"%"))
+            </if>
+        </where>
+    </select>
+    <select id="subOrderListSelectById" resultType="map">
+        SELECT sol.*,bg.img as bgimg FROM `sub_order_list` sol
+        INNER JOIN (select * from `buy_goods` where isdel=0 ) bg ON bg.pid=sol.goodsid
+        where orderid=#{orderid}
+    </select>
+</mapper>

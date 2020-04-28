@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.BuyModuleBuyDao">
+    <insert id="subBuyModuleAdd">
+        INSERT INTO sys_module_buy(`pid`, `buy_module_id`, `sys_buy_id`, `state`, `createtime`, `sysuserid`)
+        VALUES (#{pida}, #{moduleid}, #{pid}, 0, now(), #{sysuserid});
+    </insert>
+    <insert id="buyModuleBuyAdd">
+        INSERT INTO `buy_module_buy`(`pid`, `buy_module_id`, `sys_buy_id`, `state`, `createtime`, `sysuserid`)
+        VALUES (#{pida}, #{moduleid}, #{pid}, 0, now(), #{sysuserid});
+    </insert>
+    <select id="subBuyModuleSelect" resultType="map">
+        select * from sys_module_buy where sys_buy_id=#{buyid}
+    </select>
+    <select id="buyModuleBuySelect" resultType="map">
+        select * from `buy_module_buy` where sys_buy_id=#{buyid}
+    </select>
+    <delete id="buyModuleBuyDel">
+        DELETE FROM `buy_module_buy` WHERE buy_module_id=#{buy_module_id} and sys_buy_id=#{sys_buy_id}
+    </delete>
+    <delete id="subBuyModuleDel">
+        DELETE FROM sys_module_buy WHERE buy_module_id=#{buy_module_id} and sys_buy_id=#{sys_buy_id}
+    </delete>
+</mapper>

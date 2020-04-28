@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="launcher:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="28c0dac3-c703-4f09-83f9-b72f683d3a9a" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/java/com/whp/Application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/java/com/whp/Application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/java/com/whp/config/ErrorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/java/com/whp/config/ErrorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/java/com/whp/config/jwt/JWTToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/java/com/whp/config/jwt/JWTToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/java/com/whp/config/jwt/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/java/com/whp/config/jwt/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/java/com/whp/config/shrio/ShiroConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/java/com/whp/config/shrio/ShiroConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/resources/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/resources/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyClassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyGoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyGoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyMumberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyMumberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyPayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyPayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyPayErrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyPayErrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyRechargeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyRechargeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubBuyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubBuyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubCouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubCouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubIntegralController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubIntegralController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubOrderListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubOrderListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubOrderLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubOrderLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubPayLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubPayLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysBuyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysBuyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysClassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysDepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysModalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysModalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysModuleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysProvinceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysProvinceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyClassDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyClassDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyGoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyGoodsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyModuleBuyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyModuleBuyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyMumberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyMumberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyPayDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyPayDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyPayErrDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyPayErrDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyRechargeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyRechargeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyRoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubBuyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubBuyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubCouponDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubCouponDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubIntegralDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubIntegralDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubOrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubOrderListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubOrderListDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubOrderLogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubOrderLogDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubPayLogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubPayLogDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysBuyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysBuyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysCityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysCityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysClassDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysClassDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysDepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysDepartmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysModuleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysModuleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysProvinceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysProvinceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysRoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyClassImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyClassImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyGoodsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyGoodsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyMumberImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyMumberImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyPayErrImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyPayErrImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyPayImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyPayImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyRechargeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyRechargeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyRoleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyRoleImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyUserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyUserImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubBuyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubBuyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubCouponImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubCouponImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubIntegralImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubIntegralImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubOrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubOrderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubOrderListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubOrderListImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubOrderLogImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubOrderLogImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubPayLogImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubPayLogImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubUserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubUserImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysBuyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysBuyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysCityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysCityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysClassImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysClassImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysDepartmentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysDepartmentImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysModuleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysModuleImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysProvinceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysProvinceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysRoleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysRoleImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysUserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysUserImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyClassInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyClassInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyGoodsInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyGoodsInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyMumberInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyMumberInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyPayErrInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyPayErrInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyPayInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyPayInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyRoleInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyRoleInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyUserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubBuyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubBuyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubCouponInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubCouponInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubIntegralInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubIntegralInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubOrderInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubOrderInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubOrderListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubOrderListInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubOrderLogInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubOrderLogInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubPayLogInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubPayLogInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SubUserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysBuyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysBuyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysClassInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysClassInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysDepartmentInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysDepartmentInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysModuleInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysModuleInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysRoleInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysRoleInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysUserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyGoodsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyGoodsDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyModuleBuyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyModuleBuyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyMumberDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyMumberDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyPayDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyPayDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyRechargeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyRechargeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyRoleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyRoleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyUserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/BuyUserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SubBuyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SubBuyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SubCouponDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SubCouponDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SubIntegralDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SubIntegralDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SubOrderDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SubOrderDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SubOrderListDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SubOrderListDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SubOrderLogDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SubOrderLogDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SubPayLogDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SubPayLogDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SubUserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SubUserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SysBuyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SysBuyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SysClassDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SysClassDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SysDepartmentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SysDepartmentDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SysModuleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SysModuleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SysRoleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SysRoleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/SysUserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/SysUserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/CaptchaUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/CaptchaUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FdfsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FdfsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/HttpClientUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/HttpClientUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/ImgUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/ImgUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/ImgUtilTg.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/ImgUtilTg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/JWTUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/JWTUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/PropertiesUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/PropertiesUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/RedisUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/SSLClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/SSLClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/SnowFlake.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/SnowFlake.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/launcher/target/" />
+    <ignored path="$PROJECT_DIR$/utils/target/" />
+    <ignored path="$PROJECT_DIR$/user/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/Application/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/config/ErrorConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/config/SchedulerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/config/DruidDBConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1809">
+              <caret line="75" column="21" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyClassDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyClassInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/launcher/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FileUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FastDFSUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-712">
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>buyRoleAdd</find>
+      <find>getSysUserModalSelect</find>
+      <find>getBuyForBuy</find>
+      <find>SysModalSelect</find>
+      <find>buyAdd</find>
+      <find>getBuy</find>
+      <find>buyUserAdd</find>
+      <find>buyUserUpdateDel</find>
+      <find>subBuySelect</find>
+      <find>buyMumberDelUpdateByBuyId</find>
+      <find>buyRoleModuleUpdateDel</find>
+      <find>subBuyAdd</find>
+      <find>buy_role_module</find>
+      <find>subBuyDelUpdate</find>
+      <find>buyRoleModuleDel</find>
+      <find>subBuyUpdate</find>
+      <find>buyMumberDelUpdate</find>
+      <find>buyUserDelUpdate</find>
+      <find>subCouponSelect</find>
+      <find>pathname</find>
+      <find>subBuyUpdateById</find>
+      <find>buyGoodsSelect</find>
+      <find>buyMumberSelectByBuyId</find>
+      <find>buyRoleDelUpdate</find>
+      <find>subuCouponSelect</find>
+      <find>sysmoduleUpdateDel</find>
+      <find>getModuleById</find>
+      <find>moduleDigui</find>
+      <find>getModuleByPid</find>
+      <find>sysClassAdd</find>
+    </findStrings>
+    <dirStrings>
+      <dir>F:\ideapro\buy</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyGoodsImpl.java" />
+        <option value="$PROJECT_DIR$/utils/pom.xml" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FastDFSUtils.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyPayErrDao.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/ImgUtilTg.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyPayErrInterface.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/BuyPayErrDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyPayErrController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyPayErrImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubBuyDao.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyPayInterface.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyPayDao.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/BuyPayDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyMumberDao.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/BuyMumberDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SubIntegralDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyMumberController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubBuyController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysDepartmentController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysModuleImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SysDepartmentDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SysRoleDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysModuleDao.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysDepartmentImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SysUserDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysUserController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysRoleImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysModuleController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SysModuleDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysBuyController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysBuyDao.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysBuyImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/SysBuyInterface.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SysBuyDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SubBuyDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubBuyImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/BuyRoleDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyRoleDao.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyUserController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SubCouponDao.xml" />
+        <option value="$PROJECT_DIR$/launcher/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyPayImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyPayController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SubOrderDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubOrderController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/BuyUserDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyRoleImpl.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyUserDao.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/SysClassDao.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysClassController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="buy" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="buy" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="294" />
+    <option name="y" value="36" />
+    <option name="width" value="895" />
+    <option name="height" value="682" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="whp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="whp" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="whp" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="whp" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586959645820" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.whp.buy.user.Dao" />
+      <recent name="com.whp.buy.user.Impl" />
+      <recent name="com.whp.buy.user.Interface" />
+      <recent name="com.whp.buy.user.Controller" />
+      <recent name="com.whp.buy.utils.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ideapro\buy\user\src\main\resources\mapper" />
+      <recent name="F:\ideapro\buy\utils\src\main\java\com\whp\buy\utils\util" />
+      <recent name="E:\IDEA\项目\buy\user\src\main\resources\mapper" />
+      <recent name="E:\IDEA\项目\buy\utils\src\main\java\com\whp\buy\utils\util" />
+      <recent name="E:\IDEA\项目\buy\launcher\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.团购系统管理">
+    <configuration default="true" type="Application" factoryName="应用程序">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="buy" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.whp.buy.BuyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="团购系统管理" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="launcher:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="未命名_buy" />
+        <option name="HTTP_PORT" value="9061" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60485" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="launcher:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M92" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="launcher:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_buy" />
+        <option name="HTTP_PORT" value="9061" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60485" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="launcher:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BuyApplication" />
+      <item itemvalue="Tomcat Server.团购系统管理" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28c0dac3-c703-4f09-83f9-b72f683d3a9a" name="默认的" comment="" />
+      <created>1565165230614</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565165230614</updated>
+      <workItem from="1565165235307" duration="8839000" />
+      <workItem from="1565228591613" duration="9564000" />
+      <workItem from="1565832328065" duration="843000" />
+      <workItem from="1565836927732" duration="11193000" />
+      <workItem from="1565917060295" duration="7636000" />
+      <workItem from="1566188546468" duration="4172000" />
+      <workItem from="1566288695977" duration="1217000" />
+      <workItem from="1566354115757" duration="9913000" />
+      <workItem from="1566435934487" duration="15300000" />
+      <workItem from="1567040366121" duration="21824000" />
+      <workItem from="1567126752201" duration="20071000" />
+      <workItem from="1567385479781" duration="23636000" />
+      <workItem from="1567472182788" duration="16394000" />
+      <workItem from="1567558517277" duration="5862000" />
+      <workItem from="1567571474551" duration="12368000" />
+      <workItem from="1567645601844" duration="10327000" />
+      <workItem from="1567663631456" duration="12585000" />
+      <workItem from="1567731889697" duration="24410000" />
+      <workItem from="1567990807237" duration="23111000" />
+      <workItem from="1568078247429" duration="23160000" />
+      <workItem from="1568164086405" duration="24157000" />
+      <workItem from="1568196600655" duration="561000" />
+      <workItem from="1568250668218" duration="16589000" />
+      <workItem from="1568596185317" duration="1742000" />
+      <workItem from="1569214464914" duration="49000" />
+      <workItem from="1569221843940" duration="484000" />
+      <workItem from="1569375022854" duration="24473000" />
+      <workItem from="1569459285092" duration="17149000" />
+      <workItem from="1569545502532" duration="3126000" />
+      <workItem from="1569553554199" duration="13154000" />
+      <workItem from="1569718913387" duration="17085000" />
+      <workItem from="1569804705629" duration="813000" />
+      <workItem from="1569824008770" duration="2804000" />
+      <workItem from="1570496637761" duration="918000" />
+      <workItem from="1570521161178" duration="1037000" />
+      <workItem from="1570583330043" duration="4218000" />
+      <workItem from="1570614020867" duration="684000" />
+      <workItem from="1570669145133" duration="5215000" />
+      <workItem from="1570755791109" duration="1827000" />
+      <workItem from="1570844319044" duration="1833000" />
+      <workItem from="1570861385733" duration="1825000" />
+      <workItem from="1571045253545" duration="615000" />
+      <workItem from="1571101766836" duration="10052000" />
+      <workItem from="1571187115871" duration="4147000" />
+      <workItem from="1571194915408" duration="9461000" />
+      <workItem from="1571274036008" duration="24126000" />
+      <workItem from="1571360119433" duration="12583000" />
+      <workItem from="1571620123764" duration="647000" />
+      <workItem from="1571639098065" duration="1103000" />
+      <workItem from="1571645710063" duration="1261000" />
+      <workItem from="1571706726270" duration="1533000" />
+      <workItem from="1571792494151" duration="1387000" />
+      <workItem from="1571879831013" duration="14962000" />
+      <workItem from="1571965376238" duration="2724000" />
+      <workItem from="1571985755523" duration="3138000" />
+      <workItem from="1571989103126" duration="3638000" />
+      <workItem from="1572223750805" duration="13515000" />
+      <workItem from="1572310950440" duration="2837000" />
+      <workItem from="1572396567170" duration="2702000" />
+      <workItem from="1572485065354" duration="8316000" />
+      <workItem from="1572499650966" duration="5724000" />
+      <workItem from="1572567120108" duration="4097000" />
+      <workItem from="1572828251814" duration="12865000" />
+      <workItem from="1572914537580" duration="22635000" />
+      <workItem from="1573000231975" duration="14185000" />
+      <workItem from="1573087253635" duration="1557000" />
+      <workItem from="1573091728520" duration="1043000" />
+      <workItem from="1573450290062" duration="8255000" />
+      <workItem from="1573518662137" duration="11765000" />
+      <workItem from="1573604175041" duration="13029000" />
+      <workItem from="1573700682312" duration="8783000" />
+      <workItem from="1573776920820" duration="1984000" />
+      <workItem from="1573780967835" duration="808000" />
+      <workItem from="1573794750185" duration="253000" />
+      <workItem from="1574069475634" duration="434000" />
+      <workItem from="1574155641792" duration="56000" />
+      <workItem from="1574235963574" duration="637000" />
+      <workItem from="1574296728772" duration="2641000" />
+      <workItem from="1574303059054" duration="7872000" />
+      <workItem from="1574326457132" duration="999000" />
+      <workItem from="1574382587359" duration="985000" />
+      <workItem from="1574644644757" duration="2214000" />
+      <workItem from="1574668827083" duration="2991000" />
+      <workItem from="1574728724632" duration="17705000" />
+      <workItem from="1574814977696" duration="18365000" />
+      <workItem from="1574899868667" duration="14277000" />
+      <workItem from="1576027067781" duration="623000" />
+      <workItem from="1576205327429" duration="4361000" />
+      <workItem from="1576226424425" duration="735000" />
+      <workItem from="1576465003964" duration="657000" />
+      <workItem from="1577062005843" duration="1228000" />
+      <workItem from="1577068273559" duration="6095000" />
+      <workItem from="1577147146191" duration="289000" />
+      <workItem from="1577152731591" duration="661000" />
+      <workItem from="1577761867877" duration="3520000" />
+      <workItem from="1579052884760" duration="599000" />
+      <workItem from="1579334008239" duration="117000" />
+      <workItem from="1586934171552" duration="2658000" />
+      <workItem from="1586937915243" duration="8883000" />
+      <workItem from="1587040023764" duration="1112000" />
+      <workItem from="1587106966699" duration="87000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="728699000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28668684" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="设计师" order="7" />
+      <window_info id="Designer" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6213115" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3290461" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="消息" order="10" weight="0.3290461" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="运行" order="12" weight="0.7256163" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="调试" order="15" />
+      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="17" />
+      <window_info anchor="bottom" id="Messages" order="18" weight="0.17868853" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="控制板" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.32980332" />
+      <window_info anchor="right" id="Palette" order="11" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysRoleController.java</url>
+          <line>23</line>
+          <properties field="sysUserDao" class="com.whp.buy.user.Controller.SysRoleController" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysModuleImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8559">
+          <caret line="329" column="37" selection-start-line="329" selection-start-column="32" selection-end-line="329" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/SysModuleDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2808">
+          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="106" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubOrderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SubOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SubUserImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyGoodsDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2241">
+          <caret line="83" column="21" selection-start-line="81" selection-start-column="16" selection-end-line="83" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyModuleBuyDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyMumberDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="44" column="24" selection-start-line="41" selection-start-column="7" selection-end-line="44" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyPayDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyRoleDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="54" column="23" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyUserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/SubBuyDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="96" column="134" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/SysClassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SysClassDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/SysClassImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/SysClassDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyRechargeDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/BuyClassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/launcher_war.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/launcher.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2430" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/Font.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2947">
+          <caret line="334" column="28" selection-start-line="334" selection-start-column="28" selection-end-line="334" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/SubUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/CaptchaUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2808">
+          <caret line="113" column="40" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/RedisUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/SSLClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/HttpClientUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/resources/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyClassDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/BuyPayErrDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/config/jwt/JWTToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/config/jwt/JwtFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7290">
+          <caret line="270" column="19" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Impl/BuyClassImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Dao/BuyClassDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/whp/buy/user/Interface/BuyClassInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/whp/buy/utils/util/FastDFSUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-712">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/Application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/config/ErrorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/config/SchedulerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/whp/config/DruidDBConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1809">
+          <caret line="75" column="21" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>launcher:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>launcher</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SysBuyDao">
+    <insert id="buyModuleAdd">
+        INSERT INTO buy_module(`pid`, `name`, `url`, `createtime`, `sysuserid`, `type`, `top`,
+        `css`,`determine`,`parentid`,`level`)
+        VALUES (#{pid}, #{name}, #{url}, now(), #{sysuserid}, #{type}, #{top}, #{css},#{determine},#{parentid},#{level})
+    </insert>
+    <select id="getBuyModule" resultType="map">
+        SELECT * from buy_module bm
+        left join sys_user su on su.userid=bm.sysuserid
+        where bm.isdel = 0 order by bm.type,bm.createtime asc
+    </select>
+    <select id="getBuyForBuy" resultType="map">
+        SELECT * from buy_module bm
+        left join sys_user su on su.userid=bm.sysuserid
+        where bm.isdel = 0 and bm.state=0 order by bm.type
+    </select>
+    <update id="buyModuleUpdate">
+        UPDATE buy_module bm
+        <set>
+            <if test="name !=null and name!=''">
+                bm.name = #{name},
+            </if>
+            <if test="url!=null and url!=''">
+                bm.url = #{url},
+            </if>
+            <if test="css!=null and css!=''">
+                bm.css = #{css},
+            </if>
+            <if test="top!=null and top!=''">
+                bm.top = #{top},
+            </if>
+            <if test="parentid!=null and parentid!=''">
+                bm.parentid = #{parentid},
+            </if>
+            <if test="level!=null and level!=''">
+                bm.level = #{level},
+            </if>
+            <if test="determine!=null and determine!=''">
+                bm.determine = #{determine},
+            </if>
+
+        </set>
+        where bm.pid = #{pid}
+    </update>
+    <select id="getBuyById" resultType="map">
+        SELECT * from buy_module where isdel = 0 and pid=#{pid} order by `type`,`level`
+    </select>
+    <select id="getBuyByPid" resultType="map">
+        SELECT * from buy_module where isdel = 0 and parentid=#{parentid} order by `type`,`level`
+    </select>
+    <update id="buyUpdateDel">
+        UPDATE buy_module
+        <set>
+            <if test="state!=null and state!=''">
+                state = #{state},
+            </if>
+            <if test="isdel!=null and isdel!=''">
+                isdel = #{isdel},
+            </if>
+        </set>
+        where pid = #{pid}
+    </update>
+</mapper>

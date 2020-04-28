@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SysModuleDao">
+    <!-- 查询该组织机构下的所有权限 -->
+    <select id="getModuleByDepartment" resultType="HashMap">
+        SELECT sm.moduleid as moduleid,sm.parentmoduleid as parentmoduleid,sm.level as level,sm.modulename as
+        modulename,sm.url as url FROM sys_module sm
+        LEFT JOIN sys_department_module sdm ON sdm.moduleid=sm.moduleid
+        LEFT JOIN sys_department sd ON sd.departmentcode=sdm.departmentcode
+        WHERE sm.isuse=0 and sm.state=0 AND sd.departmentcode=#{departmentcode}
+    </select>
+    <!-- 查询该角色下所有权限 -->
+    <select id="getModuleByRole" resultType="HashMap">
+        SELECT sm.moduleid,sm.parentmoduleid,sm.level,sm.modulename,sm.url FROM sys_module sm
+        LEFT JOIN sys_role_module srm ON sm.moduleid = srm.moduleid
+        WHERE srm.roleid = #{roleid} and sm.isuse = 0 and sm.state=0
+    </select>
+    <!--查询用户所有权限-->
+    <select id="getModuleByUser" resultType="HashMap">
+        SELECT any_value(modulename) as modulename,any_value(parentmoduleid) as
+        parentmoduleid,any_value(level),any_value(url),any_value(isuse),any_value(shiro),any_value(icon),any_value(css),any_value(top),sm.moduleid,sm.top
+        FROM sys_module sm
+        LEFT JOIN sys_role_module srm ON sm.moduleid = srm.moduleid
+        LEFT JOIN sys_user_role sur ON sur.roleid = srm.roleid
+        WHERE sur.userid = #{userid} AND sm.isuse = 0 and sm.state=0 GROUP BY sm.moduleid ORDER by sm.top asc
+    </select>
+
+
+    <select id="getModuleByDepartmentp" resultType="HashMap">
+        SELECT sm.moduleid as moduleid,sm.parentmoduleid as parentmoduleid,sm.level as level,sm.modulename as
+        modulename,sm.url as url FROM sys_module sm
+        LEFT JOIN sys_department_module sdm ON sdm.moduleid=sm.moduleid
+        LEFT JOIN sys_department sd ON sd.parentdepartmentcode=sdm.departmentcode
+        WHERE sm.isuse=0 and sm.state=0 AND sd.parentdepartmentcode=#{parentdepartmentcode}
+        group by sm.moduleid
+    </select>
+
+
+    <!-- 添加组织机构权限 -->
+    <insert id="departmentModuleAdd">
+        INSERT INTO sys_department_module(departmentcode,moduleid,pid) VALUES (#{departmentcode},#{moduleid},#{pid})
+    </insert>
+    <!--添加角色权限-->
+    <insert id="roleModuleAdd">
+        INSERT INTO sys_role_module (roleid,moduleid) VALUES (#{roleid},#{moduleid})
+    </insert>
+    <!--删除组织机构时删除权限-->
+    <delete id="departmentModuleDelById">
+        DELETE FROM sys_department_module WHERE departmentcode =#{departmentcode}
+    </delete>
+    <!--删除组织机构树时删除角色的权限-->
+    <delete id="roleModuleDelByDeptCode">
+        DELETE FROM sys_role_module WHERE roleid in (SELECT roleid FROM sys_role sr WHERE
+        sr.departmentcode=#{departmentcode})
+    </delete>
+
+
+    <delete id="departmentModuleDel">
+        DELETE FROM sys_department_module WHERE departmentcode =#{departmentcode} and moduleid = #{moduleid}
+    </delete>
+    <delete id="roleModuleByDepartmentDel">
+        DELETE FROM sys_role_module WHERE roleid in (SELECT roleid FROM sys_role sr WHERE
+        sr.departmentcode=#{departmentcode}) AND moduleid = #{moduleid}
+    </delete>
+
+
+    <delete id="roleModuleDel">
+        DELETE FROM sys_role_module WHERE roleid=#{roleid} AND moduleid=#{moduleid}
+    </delete>
+    <delete id="roleModuleDelById">
+        DELETE FROM sys_role_module WHERE roleid = #{roleid}
+    </delete>
+    <select id="getModule" resultType="map">
+        SELECT sm.*,su.username from sys_module sm
+        left join sys_user su on su.userid=sm.userid
+        where sm.isuse = 0 order by sm.level,sm.createtime asc
+
+    </select>
+    <insert id="moduleAdd">
+        INSERT INTO sys_module(moduleid,modulename,parentmoduleid,`level`,url,userid,createtime,css,top) VALUES
+        (#{moduleid},#{modulename},#{parentmoduleid},#{level},#{url},#{userid},now(),#{css},#{top})
+    </insert>
+    <update id="moduleUpdate">
+        UPDATE sys_module sm
+        <set>
+            <if test="modulename !=null and modulename!=''">
+                sm.modulename = #{modulename},
+            </if>
+            <if test="parentmoduleid!=null and parentmoduleid!=''">
+                sm.parentmoduleid = #{parentmoduleid},
+            </if>
+            <if test="level!=null and level!=''">
+                sm.level = #{level},
+            </if>
+            <if test="url!=null and url!=''">
+                sm.url = #{url},
+            </if>
+            <if test="css!=null and css!=''">
+                sm.css = #{css},
+            </if>
+            <if test="top!=null and top!=''">
+                sm.top = #{top},
+            </if>
+        </set>
+        where sm.moduleid = #{moduleid}
+    </update>
+
+    <select id="getModuleById" resultType="map">
+        SELECT * from sys_module where isuse = 0 and moduleid=#{moduleid} order by `level`,createtime asc
+    </select>
+    <select id="getModuleByPid" resultType="map">
+        SELECT * from sys_module where isuse = 0 and parentmoduleid=#{parentmoduleid} order by `level`,createtime asc
+    </select>
+    <update id="moduleUpdateDel">
+        UPDATE sys_module sm
+        <set>
+            <if test="state!=null and state!=''">
+                sm.state = #{state},
+            </if>
+            <if test="isuse!=null and isuse!=''">
+                sm.isuse = #{isuse},
+            </if>
+        </set>
+        where sm.moduleid = #{moduleid}
+    </update>
+</mapper>

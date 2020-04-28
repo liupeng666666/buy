@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SysRoleDao">
+    <insert id="sysRoleAdd">
+        INSERT INTO sys_role (roleid,departmentcode,rolename,rolememo,createuserid,createdatetime) VALUES
+        (#{roleid},#{departmentcode},#{rolename},#{rolememo},#{createuserid},now())
+    </insert>
+    <update id="sysRoleUpdate">
+        UPDATE sys_role sr
+        <set>
+            <if test="rolename !=null and rolename!=''">
+                sr.rolename = #{rolename},
+            </if>
+            <if test="departmentcode!=null and departmentcode!=''">
+                sr.departmentcode = #{departmentcode},
+            </if>
+            <if test="rolememo!=null and rolememo!=''">
+                sr.rolememo = #{rolememo}
+            </if>
+            <if test="isuse!=null and isuse!=''">
+                sr.isuse = #{isuse}
+            </if>
+        </set>
+        where sr.roleid = #{roleid}
+    </update>
+    <update id="sysRoleDel">
+        UPDATE sys_role set isuse = 1 where roleid = #{roleid}
+    </update>
+    <select id="sysRoleSelectBydept" resultType="map">
+        select br.*,bd.departmentname,su.username from sys_role br
+        JOIN (select * from sys_department where isuse=0 ) bd ON bd.departmentcode=br.departmentcode
+        JOIN sys_user su ON su.userid=br.createuserid
+        where br.isuse=0 and br.departmentcode IN
+        <foreach collection="list" item="departmentcode" open="(" separator="," close=")">
+            #{departmentcode}
+        </foreach>
+        order by createdatetime DESC
+    </select>
+    <select id="getRoleByUser" resultType="HashMap">
+        SELECT sr.roleid AS roleid,sr.rolename AS rolename,sr.rolememo AS rolememo,sr.departmentcode AS departmentcode
+        FROM sys_role sr
+        LEFT JOIN sys_user_role sur ON sr.roleid = sur.roleid
+        WHERE sur.userid=#{userid} AND sr.isuse=0 GROUP BY sr.roleid
+    </select>
+
+    <!--添加一条用户角色关系-->
+    <insert id="sysUserRoleAdd">
+        INSERT INTO sys_user_role (userid,roleid) VALUES (#{userid},#{roleid})
+    </insert>
+    <delete id="sysUserRoleDel">
+        DELETE FROM sys_user_role WHERE userid =#{userid} AND roleid= #{roleid}
+    </delete>
+</mapper>

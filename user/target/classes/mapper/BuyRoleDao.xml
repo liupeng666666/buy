@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.BuyRoleDao">
+    <insert id="buyRoleAdd">
+        INSERT INTO `buy_role`(`pid`, `name`, `state`, `isdel`, `createtime`, `userid`, `buyid`,`issys`)
+        VALUES (#{pidr}, #{name}, 0, 0, now(), #{pidu},#{pid},1);
+    </insert>
+    <insert id="buyRoleModuleAdd">
+        INSERT INTO `buy_role_module`(`pid`, `roleid`, `moduleid`)
+        VALUES (#{pidbrm}, #{pidr}, #{moduleid});
+    </insert>
+    <delete id="buyRoleModuleDel">
+        delete from `buy_role_module`
+        where moduleid=#{moduleid} and roleid in(
+        select pid from `buy_role` where buyid = #{buyid}
+        )
+    </delete>
+    <select id="buyRoleSelectByBuyid" resultType="map">
+        select * from `buy_role` where buyid=#{buyid} and issys=1
+    </select>
+
+    <select id="buyRoleSelectByPage" resultType="map">
+        select br.*,sb.nickname as sbnickname,bu.username as buusername from `buy_role` br
+        join (select * from `sub_buy` where isdel=0 ) sb on sb.pid=br.buyid
+        join (select * from `buy_user` where isdel=0) bu on bu.pid=br.userid
+        where br.isdel=0
+        <if test="map.search!=null and map.search!=''">
+            AND (br.name like CONCAT("%",#{map.search},"%") OR sb.nickname like CONCAT("%",#{map.search},"%"))
+        </if>
+        ORDER BY br.createtime DESC
+        limit #{start},#{end}
+
+    </select>
+    <select id="buyRoleSelectByCount" resultType="int">
+        select count(0) from `buy_role` br
+        join (select * from `sub_buy` where isdel=0 ) sb on sb.pid=br.buyid
+        join (select * from `buy_user` where isdel=0) bu on bu.pid=br.userid
+        where br.isdel=0
+        <if test="map.search!=null and map.search!=''">
+            AND (br.name like CONCAT("%",#{map.search},"%") OR sb.nickname like CONCAT("%",#{map.search},"%"))
+        </if>
+
+    </select>
+    <update id="buyRoleDelUpdate">
+        update `buy_role`
+        <set>
+            <if test="state!=null and state!=''">
+                state=#{state},
+            </if>
+            <if test="isdel!=null and isdel!=''">
+                isdel=#{isdel},
+            </if>
+            updatetime=now()
+        </set>
+        where pid=#{pid}
+    </update>
+    <update id="buyRoleUpdateDel">
+        update `buy_role` set isdel=1 where buyid = #{buyid}
+    </update>
+    <update id="buyRoleModuleUpdateDel">
+        delete from `buy_role_module` where buyid = #{buyid}
+    </update>
+    <delete id="buyRoleModuleDelById">
+        delete from `buy_role_module` where roleid =#{roleid}
+    </delete>
+</mapper>

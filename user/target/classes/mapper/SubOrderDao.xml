@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SubOrderDao">
+
+    <select id="subOrderSelectByPage" resultType="map">
+        SELECT so.*,su.nickname as sunickname,su.img as suimg,sb.nickname as sbnickname,bm.nickname as bmnickname,bm.img
+        as bmimg FROM `sub_order` so
+        INNER JOIN (select * from `sub_user` where isdel=0 ) su ON su.pid =so.userid
+        INNER JOIN (select * from sub_buy where isdel=0 ) sb ON sb.pid=so.buyid
+        INNER JOIN (select * from buy_mumber where isdel=0 ) bm ON bm.pid=so.mumberid
+        <where>
+            <if test="map.buyid!=null and map.buyid!=''">
+                AND so.buyid=#{map.buyid}
+            </if>
+            <if test="map.mumberid!=null and map.mumberid!=''">
+                AND so.mumberid=#{map.mumberid}
+            </if>
+            <if test="map.state!=null and map.state!=''">
+                AND so.state=#{map.state}
+            </if>
+            <if test="map.paystate!=null and map.paystate!=''">
+                AND so.paystate=#{map.paystate}
+            </if>
+            <if test="map.iscoupon!=null and map.iscoupon!=''">
+                AND so.iscoupon=#{map.iscoupon}
+            </if>
+            <if test="map.isintegral!=null and map.isintegral!=''">
+                AND so.isintegral=#{map.isintegral}
+            </if>
+            <if test="map.isgive!=null and map.isgive!=''">
+                AND so.isgive=#{map.isgive}
+            </if>
+            <if test="map.ismention!=null and map.ismention!=''">
+                AND so.ismention=#{map.ismention}
+            </if>
+            <if test="map.spell!=null and map.spell!=''">
+                AND so.spell=#{map.spell}
+            </if>
+            <if test="map.shipment!=null and map.shipment!=''">
+                AND so.shipment=#{map.shipment}
+            </if>
+            <if test="map.search!=null and map.search!=''">
+                AND su.nickname like CONCAT("%",#{map.search},"%")
+            </if>
+
+        </where>
+        LIMIT #{start},#{end}
+    </select>
+    <select id="subOrderSelectByCount" resultType="int">
+        SELECT count(0) FROM `sub_order` so
+        INNER JOIN (select * from `sub_user` where isdel=0 ) su ON su.pid =so.userid
+        INNER JOIN (select * from sub_buy where isdel=0 ) sb ON sb.pid=so.buyid
+        INNER JOIN (select * from buy_mumber where isdel=0 ) bm ON bm.pid=so.mumberid
+        <where>
+            <if test="map.buyid!=null and map.buyid!=''">
+                AND so.buyid=#{map.buyid}
+            </if>
+            <if test="map.mumberid!=null and map.mumberid!=''">
+                AND so.mumberid=#{map.mumberid}
+            </if>
+            <if test="map.state!=null and map.state!=''">
+                AND so.state=#{map.state}
+            </if>
+            <if test="map.paystate!=null and map.paystate!=''">
+                AND so.paystate=#{map.paystate}
+            </if>
+            <if test="map.iscoupon!=null and map.iscoupon!=''">
+                AND so.iscoupon=#{map.iscoupon}
+            </if>
+            <if test="map.isintegral!=null and map.isintegral!=''">
+                AND so.isintegral=#{map.isintegral}
+            </if>
+            <if test="map.isgive!=null and map.isgive!=''">
+                so.isgive=#{map.isgive}
+            </if>
+            <if test="map.ismention!=null and map.ismention!=''">
+                AND so.ismention=#{map.ismention}
+            </if>
+            <if test="map.spell!=null and map.spell!=''">
+                AND so.spell=#{map.spell}
+            </if>
+            <if test="map.shipment!=null and map.shipment!=''">
+                AND so.shipment=#{map.shipment}
+            </if>
+            <if test="map.search!=null and map.search!=''">
+                AND su.nickname like CONCAT("%",#{map.search},"%")
+            </if>
+        </where>
+
+    </select>
+    <select id="subOrderSelectByTotalAll" resultType="String">
+        SELECT sum(total) FROM `sub_order` where state = 2
+    </select>
+    <select id="subOrderSelectByTotalLast" resultType="String">
+        SELECT sum(total) FROM `sub_order`
+        where state = 2 and createtime
+        BETWEEN (select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract(day from now())-1 day),interval
+        1 month))
+        AND (select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract(day from now()) day),interval 0
+        month))
+    </select>
+    <select id="subOrderSelectByTotalNow" resultType="String">
+        SELECT sum(total) FROM `sub_order`
+        where state = 2 and createtime
+        BETWEEN (select DATE_ADD(curdate(),interval -day(curdate())+1 day))
+        AND (select DATE_ADD(curdate(),interval 1 DAY))
+    </select>
+    <select id="subOrderSelectByMember" resultType="map">
+        select * from (SELECT sm.nickname as memberName,count(0) as total FROM `sub_order` so
+        inner join (select * from buy_mumber where isdel=0) sm ON sm.pid= so.mumberid
+        where so.state=2
+        <if test="map.starttime!=null and map.starttime!='' and map.endtime!=null and map.endtime!=''">
+            AND so.createtime BETWEEN (select DATE_ADD(#{map.starttime},interval 0 SECOND)) AND (SELECT
+            DATE_ADD(#{map.endtime}, INTERVAL 86399 HOUR_SECOND))
+        </if>
+        GROUP BY mumberid) as a order by a.total desc
+        limit 0,10
+    </select>
+</mapper>

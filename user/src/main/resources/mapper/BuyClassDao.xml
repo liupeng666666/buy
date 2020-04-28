@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.BuyClassDao">
+
+    <select id="buyClassSelectByPage" resultType="map">
+        SELECT bc.*,su.username as suusername,sb.nickname as sbnickname from `buy_class` bc
+        left join `sys_user` su on su.userid=bc.sys_userid
+        left join `sub_buy` sb on sb.pid=bc.buyid
+        WHERE bc.isdel=0
+        <if test="map.buyid!=null and map.buyid!=''">
+            AND bc.buyid=#{map.buyid}
+        </if>
+        <if test="map.search!=null and map.search!=''">
+            AND bc.name like CONCAT("%",#{map.search},"%")
+        </if>
+        ORDER BY bc.createtime DESC
+        LIMIT #{start},#{end}
+    </select>
+    <select id="buyClassSelectByCount" resultType="int">
+        SELECT count(0) from `buy_class` bc
+        left join `sys_user` su on su.userid=bc.sys_userid
+        left join `sub_buy` sb on sb.pid=bc.buyid
+        WHERE bc.isdel=0
+        <if test="map.buyid!=null and map.buyid!=''">
+            AND bc.buyid=#{map.buyid}
+        </if>
+        <if test="map.search!=null and map.search!=''">
+            AND bc.name like CONCAT("%",#{map.search},"%")
+        </if>
+    </select>
+    <select id="buyClassSelectBySearch" resultType="map">
+        SELECT * from `buy_class` WHERE isdel=0
+    </select>
+
+</mapper>

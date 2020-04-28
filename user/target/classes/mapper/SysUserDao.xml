@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SysUserDao">
+
+    <!--根据用户名查询用户信息 仅程序内部使用-->
+    <select id="getSubUserByUser" resultType="map">
+        select su.userid,su.username,su.nickname,su.img,su.departmentcode,su.phone,sur.roleid from sys_user su
+        JOIN sys_user_role sur on sur.userid=su.userid
+        where su.userid=#{pid} and su.isuse=0 and su.state=0
+    </select>
+    <select id="GetSubUserLogin" resultType="map">
+        select userid,username,nickname,img,departmentcode,phone from sys_user where username=#{username} and
+        password=#{password} and isuse=0 and state=0
+    </select>
+    <select id="getSysUserModalSelect" resultType="map">
+        SELECT max(sm.moduleid),sm.* FROM sys_module sm
+        INNER JOIN sys_role_module srm ON sm.moduleid = srm.moduleid
+        INNER JOIN sys_role as a on a.roleid=srm.roleid
+        INNER JOIN sys_user_role sur ON sur.roleid = srm.roleid
+        WHERE sur.userid = #{userid} AND sm.isuse = 0 and a.isuse=0 GROUP BY sm.moduleid ORDER by sm.top asc
+    </select>
+    <select id="getSysUserModalSelectDan" resultType="map">
+        SELECT max(sm.moduleid),sm.* FROM sys_module sm
+        INNER JOIN sys_role_module srm ON sm.moduleid = srm.moduleid
+        INNER JOIN sys_role as a on a.roleid=srm.roleid
+        INNER JOIN sys_user_role sur ON sur.roleid = srm.roleid
+        WHERE sur.userid = #{userid} AND sm.isuse = 0 and a.isuse=0 and sm.url!="#" and sm.level=1 GROUP BY sm.moduleid
+        ORDER by sm.top asc limit 1;
+    </select>
+
+    <insert id="sysUserAdd">
+        INSERT INTO
+        sys_user(userid,username,password,departmentcode,phone,createuserid,createdatetime,lastedituserid,lasteditdatetime,nickname,img)
+        VALUES
+        (#{userid},#{username},#{password},#{departmentcode},#{phone},#{createuserid},now(),#{lastedituserid},now(),#{nickname},#{img})
+    </insert>
+    <select id="isSysUser" resultType="int">
+        SELECT COUNT(0) FROM sys_user su
+        <where>
+            <if test="username !=null and username!=''">
+                su.username = #{username}
+            </if>
+            <if test="phone!=null and phone!=''">
+                AND su.phone = #{phone}
+            </if>
+            <if test="userid!=null and userid!=''">
+                AND su.userid != #{userid}
+            </if>
+        </where>
+    </select>
+    <select id="sysUserByPage" resultType="map">
+        SELECT * FROM
+        ( SELECT
+        su.userid,su.username,su.nickname,su.departmentcode,su.phone,su.createuserid,su.createdatetime,su.lastedituserid,su.lasteditdatetime,su.state,su.img,sd.departmentname,su1.username
+        as cusername,su2.username as lusername FROM sys_user su
+        join (select * from sys_department where isuse=0) sd on sd.departmentcode=su.departmentcode
+        left join sys_user su1 on su.createuserid=su1.userid
+        left join (select * from sys_user where lastedituserid is not null) su2 on su.lastedituserid=su2.userid
+        WHERE su.isuse = 0 AND su.departmentcode IN
+        <foreach collection="list" item="departmentcode" open="(" separator="," close=")">
+            #{departmentcode}
+        </foreach>
+        ) AS a
+        LEFT JOIN (
+        SELECT GROUP_CONCAT(sr.rolename) AS 'rolename', GROUP_CONCAT(sr.roleid) AS 'roleid', su.userid as suuserid FROM
+        sys_role AS sr
+        INNER JOIN sys_user_role AS su ON su.roleid = sr.roleid
+        WHERE sr.isuse = 0
+        GROUP BY su.userid
+        ) AS b ON a.userid = b.suuserid
+        limit #{start},#{end}
+    </select>
+
+    <select id="sysUserCount" resultType="int">
+        SELECT count(0) FROM
+        ( SELECT
+        su.userid,su.username,su.nickname,su.departmentcode,su.phone,su.createuserid,su.createdatetime,su.lastedituserid,su.lasteditdatetime,su.state,su.img,sd.departmentname,su1.username
+        as cusername,su2.username as lusername FROM sys_user su
+        join (select * from sys_department where isuse=0) sd on sd.departmentcode=su.departmentcode
+        left join sys_user su1 on su.createuserid=su1.userid
+        left join (select * from sys_user where lastedituserid is not null) su2 on su.lastedituserid=su2.userid
+        WHERE su.isuse = 0 AND su.departmentcode IN
+        <foreach collection="list" item="departmentcode" open="(" separator="," close=")">
+            #{departmentcode}
+        </foreach>
+        ) AS a
+        LEFT JOIN (
+        SELECT GROUP_CONCAT(sr.rolename) AS 'rolename', GROUP_CONCAT(sr.roleid) AS 'roleid', su.userid as suuserid FROM
+        sys_role AS sr
+        INNER JOIN sys_user_role AS su ON su.roleid = sr.roleid
+        WHERE sr.isuse = 0
+        GROUP BY su.userid
+        ) AS b ON a.userid = b.suuserid
+    </select>
+    <select id="sysUserBySearchPage" resultType="map">
+        SELECT * FROM
+        ( SELECT
+        su.userid,su.username,su.nickname,su.departmentcode,su.phone,su.createuserid,su.createdatetime,su.lastedituserid,su.lasteditdatetime,su.state,su.img,sd.departmentname,su1.username
+        as cusername,su2.username as lusername FROM sys_user su
+        join (select * from sys_department where isuse=0) sd on sd.departmentcode=su.departmentcode
+        left join sys_user su1 on su.createuserid=su1.userid
+        left join (select * from sys_user where lastedituserid is not null) su2 on su.lastedituserid=su2.userid
+        WHERE su.isuse = 0
+        <!--<if test="map.departmentcode!=null and map.departmentcode!=''">-->
+        <!--and su.departmentcode = #{map.departmentcode}-->
+        <!--</if>-->
+        <!--<if test="list!=null and list.size>0">-->
+        and su.departmentcode IN
+        <foreach collection="list" item="departmentcode" open="(" separator="," close=")">
+            #{departmentcode}
+        </foreach>
+        <!--</if>-->
+        <if test="username!=null and username!=''">
+            and su.username like CONCAT('%',#{username},'%')
+        </if>
+        ) AS a
+        LEFT JOIN (
+        SELECT GROUP_CONCAT(sr.rolename) AS 'rolename', GROUP_CONCAT(sr.roleid) AS 'roleid', su.userid as suuserid FROM
+        sys_role AS sr
+        INNER JOIN sys_user_role AS su ON su.roleid = sr.roleid
+        WHERE sr.isuse = 0
+        GROUP BY su.userid
+        ) AS b ON a.userid = b.suuserid
+        limit #{start},#{end}
+    </select>
+    <select id="sysUserBySearchCount" resultType="int">
+        SELECT count(0) FROM
+        ( SELECT
+        su.userid,su.username,su.nickname,su.departmentcode,su.phone,su.createuserid,su.createdatetime,su.lastedituserid,su.lasteditdatetime,su.state,su.img,sd.departmentname,su1.username
+        as cusername,su2.username as lusername FROM sys_user su
+        join (select * from sys_department where isuse=0) sd on sd.departmentcode=su.departmentcode
+        left join sys_user su1 on su.createuserid=su1.userid
+        left join (select * from sys_user where lastedituserid is not null) su2 on su.lastedituserid=su2.userid
+        WHERE su.isuse = 0
+        and su.departmentcode IN
+        <foreach collection="list" item="departmentcode" open="(" separator="," close=")">
+            #{departmentcode}
+        </foreach>
+
+        <if test="username!=null and username!=''">
+            and su.username like CONCAT('%',#{username},'%')
+        </if>
+        ) AS a
+        LEFT JOIN (
+        SELECT GROUP_CONCAT(sr.rolename) AS 'rolename', GROUP_CONCAT(sr.roleid) AS 'roleid', su.userid as suuserid FROM
+        sys_role AS sr
+        INNER JOIN sys_user_role AS su ON su.roleid = sr.roleid
+        WHERE sr.isuse = 0
+        GROUP BY su.userid
+        ) AS b ON a.userid = b.suuserid
+    </select>
+    <!--<select id="sysUserById" resultType="map">-->
+    <!--SELECT su.userid,username,nickname,departmentcode,phone,img,sur.roleid FROM sys_user su-->
+    <!--JOIN sys_user_role sur ON sur.userid=su.userid where su.userid=#{userid}-->
+    <!--</select>-->
+    <update id="sysUserUpdate">
+        UPDATE sys_user AS su
+        <set>
+            <if test="map.username !=null and map.username!=''">
+                su.username = #{map.username},
+            </if>
+            <if test="map.departmentcode!=null and map.departmentcode!=''">
+                su.departmentcode = #{map.departmentcode},
+            </if>
+            <if test="map.phone!=null and map.phone!=''">
+                su.phone = #{map.phone},
+            </if>
+            <if test="map.nickname!=null and map.nickname!=''">
+                su.nickname = #{map.nickname},
+            </if>
+            <if test="map.img!=null and map.img!=''">
+                su.img = #{map.img},
+            </if>
+            <if test="map.lastedituserid!=null and map.lastedituserid!=''">
+                su.lastedituserid = #{map.lastedituserid},
+            </if>
+            <if test="map.password!=null and map.password!=''">
+                su.password = #{map.password},
+            </if>
+            <if test="map.state!=null and map.state!=''">
+                su.state = #{map.state},
+            </if>
+            <if test="map.isuse!=null and map.isuse!=''">
+                su.isuse = #{map.isuse},
+            </if>
+            lasteditdatetime=now()
+        </set>
+
+        WHERE su.userid = #{map.userid}
+    </update>
+</mapper>

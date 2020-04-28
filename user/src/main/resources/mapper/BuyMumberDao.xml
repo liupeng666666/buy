@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.BuyMumberDao">
+    <select id="buyMumberSelectByPage" resultType="map">
+        select bm.*,sb.nickname as sbnickname,bmm.withdraw,bmm.surplus,bmm.sale,bmm.total_num,bmm.total,bu.username as
+        buusername from `buy_mumber` bm
+        left join (select * from `sub_buy` where isdel=0 ) sb on sb.pid=bm.buyid
+        left join `buy_mumber_money` bmm on bmm.pid=bm.pid
+        left join (select * from `buy_user` where isdel=0) bu on bu.pid=bm.userid
+        where bm.isdel=0
+        <if test="map.search!=null and map.search!=''">
+            AND (bm.nickname like CONCAT("%",#{map.search},"%") OR bm.phone like CONCAT("%",#{map.search},"%") OR
+            bm.fullname like CONCAT("%",#{map.search},"%") OR sb.nickname like CONCAT("%",#{map.search},"%"))
+        </if>
+        ORDER BY createtime DESC
+        limit #{start},#{end}
+
+    </select>
+    <select id="buyMumberSelectByCount" resultType="int">
+        select count(0) from `buy_mumber` bm
+        left join (select * from `sub_buy` where isdel=0 ) sb on sb.pid=bm.buyid
+        left join `buy_mumber_money` bmm on bmm.pid=bm.pid
+        left join (select * from `buy_user` where isdel=0) bu on bu.pid=bm.userid
+        where bm.isdel=0
+        <if test="map.search!=null and map.search!=''">
+            AND (bm.nickname like CONCAT("%",#{map.search},"%") OR bm.phone like CONCAT("%",#{map.search},"%") OR
+            bm.fullname like CONCAT("%",#{map.search},"%") OR sb.nickname like CONCAT("%",#{map.search},"%"))
+        </if>
+
+    </select>
+    <update id="buyMumberDelUpdate">
+        update `buy_mumber`
+        <set>
+            <if test="state!=null and state!=''">
+                state=#{state},
+            </if>
+            <if test="isdel!=null and isdel!=''">
+                isdel=#{isdel},
+            </if>
+            updatetime=now()
+        </set>
+        where pid=#{pid}
+    </update>
+    <select id="buyMumberSelectByBuyId" resultType="map">
+        select bm.*,sb.color,sb.nickname as sbnickname,IFNULL(bmm.total,0) as bmmtotal,IFNULL(bmm.sale,0) as bmmsale
+        from `buy_mumber` bm
+        left join (select * from `sub_buy` where isdel=0) sb on sb.pid=bm.buyid
+        left join (select * from `buy_mumber_money`) bmm on bmm.pid=bm.pid
+        where bm.isdel=0
+        <if test="buyid!=null and buyid!=''">
+            and bm.buyid=#{buyid}
+        </if>
+    </select>
+    <update id="buyMumberDelUpdateByBuyId">
+        update `buy_mumber` set isdel=#{map.isdel},updatetime=now() where buyid=#{map.pid}
+    </update>
+</mapper>

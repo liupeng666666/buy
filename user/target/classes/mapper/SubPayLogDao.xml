@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whp.buy.user.Dao.SubPayLogDao">
+    <select id="subPayLogSelectByTotalAll" resultType="String">
+        SELECT sum(money) FROM `sub_pay_log` WHERE isdel=0 and (type=2 or type=3)
+    </select>
+    <select id="subPayLogSelectByTotalLast" resultType="String">
+        SELECT sum(money) FROM `sub_pay_log` WHERE isdel=0 and (type=2 or type=3) and createtime
+        BETWEEN (select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract( day from now())-1
+        day),interval 1 month))
+        AND (select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract( day from now()) day),interval 0
+        month))
+    </select>
+    <select id="subPayLogSelectByTotalNow" resultType="String">
+        SELECT sum(money) FROM `sub_pay_log` WHERE isdel=0 and (type=2 or type=3) and createtime
+        BETWEEN (select DATE_ADD(curdate(),interval -day(curdate())+1 day))
+        AND (select DATE_ADD(curdate(),interval 1 DAY))
+    </select>
+
+</mapper>
